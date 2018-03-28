@@ -2,6 +2,8 @@
 
 body {
 	font-family: 'Mina', sans-serif;
+	margin: 0 auto;
+	padding: 0 auto;
 }
 
 .board {
