@@ -38,7 +38,7 @@ Card.prototype = {
 
 Card.prototype.editCard = function() {
     var self = this;
-    myPrompt('Enter new name of the card', function(name){
+    prompt('Enter new name of the card', function(name){
         if (name != self.name) {
             $.ajax({
                 url: baseUrl + '/card/' + self.id,

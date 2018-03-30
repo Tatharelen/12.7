@@ -68,7 +68,7 @@ Column.prototype = {
 
 Column.prototype.editColumn = function() {
     var self = this;
-    myPrompt('Enter new name of this column', function(name){
+    prompt('Enter new name of this column', function(name){
         if (name != self.name) {
             $.ajax({
                 url: baseUrl + '/column/' + self.id,
