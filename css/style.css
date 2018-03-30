@@ -69,7 +69,17 @@ body {
 .column-container .column .btn-delete {
 	position: relative;
 	top: -85px;
-	left: 66%;
+	left: 61%;
+	background-color: #D94167;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.column-container .column .btn-edit {
+	position: relative;
+	top: -85px;
+	left: 60%;
 	background-color: #D94167;
 	color: white;
 	border: none;
@@ -101,7 +111,16 @@ body {
 	border: none;
 	color: white;
 	position: relative;
-	left: 68px;
+	left: 55px;
+	top: 2px;	
+}
+
+.column-container .column .card-list .card .btn-edit {
+	background-color: #D94167;
+	border: none;
+	color: white;
+	position: relative;
+	left: 50px;
 	top: 2px;	
 }
 
