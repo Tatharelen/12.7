@@ -12,16 +12,16 @@ function Column(id, name) {
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
 		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
-		var columnEdit = $('<button class="btn-edit">/</button>');
+		// var columnEdit = $('<button class="btn-edit">/</button>');
 
 		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
 		columnDelete.click(function() {
 			self.deleteColumn();
 		});
 
-		columnEdit.click(function() {
-            self.editColumn();
-        });
+		// columnEdit.click(function() {
+  //           self.editColumn();
+  //       });
 		
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
@@ -42,7 +42,7 @@ function Column(id, name) {
 			
 			// KONSTRUOWANIE ELEMENTU KOLUMNY
 		column.append(columnTitle)
-			.append(columnEdit)
+			// .append(columnEdit)
 			.append(columnDelete)
 			.append(columnAddCard)
 			.append(columnCardList);
@@ -66,21 +66,21 @@ Column.prototype = {
  	}
 };
 
-Column.prototype.editColumn = function() {
-    var self = this;
-    prompt('Enter new name of this column', function(name){
-        if (name != self.name) {
-            $.ajax({
-                url: baseUrl + '/column/' + self.id,
-                type: 'PUT',
-                data: {
-                    name: name
-                },
-                success: function(response) {
-                    self.$element.children('.column-title').text(name);
-                    self.name = name;
-                }
-            });
-        }
-    }, this.name);
-}
+// Column.prototype.editColumn = function() {
+//     var self = this;
+//     prompt('Enter new name of this column', function(name){
+//         if (name != self.name) {
+//             $.ajax({
+//                 url: baseUrl + '/column/' + self.id,
+//                 type: 'PUT',
+//                 data: {
+//                     name: name
+//                 },
+//                 success: function(response) {
+//                     self.$element.children('.column-title').text(name);
+//                     self.name = name;
+//                 }
+//             });
+//         }
+//     }, this.name);
+// }
